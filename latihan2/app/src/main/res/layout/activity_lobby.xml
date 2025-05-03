@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abu"
+    tools:context=".Lobby">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/setling"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/vlogos">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:text="Welcome To Monitor System"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="95dp"
+                android:text="Guest"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="123dp"
+                android:src="@drawable/arc_1">
+            </ImageView>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="25dp"
+            android:background="@drawable/kotaktumpul"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/circularProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:indeterminate="false"
+                    android:progress="40"
+                    app:indicatorColor="@color/white"
+                    app:indicatorSize="90dp"
+                    app:trackColor="@color/abugelap"
+                    app:trackThickness="10dp">
+                </com.google.android.material.progressindicator.CircularProgressIndicator>
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/circularProgress1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:indeterminate="false"
+                    android:progress="90"
+                    app:indicatorColor="@color/white"
+                    app:indicatorSize="90dp"
+                    app:trackColor="@color/abugelap"
+                    app:trackThickness="10dp">
+                </com.google.android.material.progressindicator.CircularProgressIndicator>
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/circularProgress2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:indeterminate="false"
+                    android:progress="10"
+                    app:indicatorColor="@color/white"
+                    app:indicatorSize="90dp"
+                    app:trackColor="@color/abugelap"
+                    app:trackThickness="10dp">
+                </com.google.android.material.progressindicator.CircularProgressIndicator>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Suhu"
+                    android:layout_marginLeft="35dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kelembapan"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cahaya"
+                    android:layout_marginLeft="32dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottomNavigationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="250dp"
+                    app:menu="@menu/bottom_nav_menu"
+                    android:background="@android:color/darker_gray"
+                    app:labelVisibilityMode="labeled" >
+                </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
